@@ -39,10 +39,34 @@ func main() {
 			if err2 != nil {
 				panic(err2)
 			}
-
 			p(result1 - restul2)
 		}
+		if s.Contains(userInput, "*") {
+			var data = s.Split(userInput, "*")
+			result1, err1 := c.Atoi(data[0])
+			restul2, err2 := c.Atoi(data[1])
 
+			if err1 != nil {
+				panic(err1)
+			}
+			if err2 != nil {
+				panic(err2)
+			}
+			p(result1 * restul2)
+		}
+		if s.Contains(userInput, "/") {
+			var data = s.Split(userInput, "/")
+			result1, err1 := c.Atoi(data[0])
+			restul2, err2 := c.Atoi(data[1])
+
+			if err1 != nil {
+				panic(err1)
+			}
+			if err2 != nil {
+				panic(err2)
+			}
+			p(result1 / restul2)
+		}
 		if s.Contains(userInput, "exit") {
 			break
 		}
